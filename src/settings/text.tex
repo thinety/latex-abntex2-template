@@ -1,0 +1,81 @@
+%CAPA & FOLHA DE ROSTO
+%--------------------------------------
+\autor{Autor}
+\titulo{Título em negrito:\\ Esse texto está na outra linha}
+\local{Local}
+\data{\today}
+
+\orientador{Orientador}
+\coorientador{Coorientador}
+\instituicao{%
+    Instituição 1
+    \par
+    Instituição 2}
+\preambulo{Preâmbulo: \lipsum[1]}   % O preambulo deve conter o tipo do trabalho, o objetivo, 
+                                    % o nome da instituição e a área de concentração 
+
+\tipotrabalho{Tipo de trabalho}
+%--------------------------------------
+
+
+\newboolean{TemCapa}
+\setboolean{TemCapa}{false}
+\newboolean{TemFolhaDeRosto}
+\setboolean{TemFolhaDeRosto}{true}
+\newboolean{TemFichaCatalografica}
+\setboolean{TemFichaCatalografica}{false}
+\newboolean{TemErrata}
+\setboolean{TemErrata}{false}
+\newboolean{TemTermoDeAprovacao}
+\setboolean{TemTermoDeAprovacao}{false}
+\newboolean{TemDedicatoria}
+\setboolean{TemDedicatoria}{false}
+\newboolean{TemAgradecimentos}
+\setboolean{TemAgradecimentos}{false}
+\newboolean{TemEpigrafe}
+\setboolean{TemEpigrafe}{false}
+
+\newboolean{TemResumos}
+\setboolean{TemResumos}{false}  % Resumo em qualquer língua
+\newboolean{TemAbstract}
+\setboolean{TemAbstract}{false} % Inglês
+\newboolean{TemResume}
+\setboolean{TemResume}{false}   % Francês
+\newboolean{TemResumen}
+\setboolean{TemResumen}{false}  % Espanhol
+
+\newboolean{TemListaDeIlustracoes}
+\setboolean{TemListaDeIlustracoes}{false}
+\newboolean{TemListaDeQuadros}
+\setboolean{TemListaDeQuadros}{false}   % FALTA IMPLEMENTAR!!!
+\newboolean{TemListaDeTabelas}
+\setboolean{TemListaDeTabelas}{false}
+\newboolean{TemListaDeSiglas}
+\setboolean{TemListaDeSiglas}{false}
+\newboolean{TemListaDeSimbolos}
+\setboolean{TemListaDeSimbolos}{false}
+
+\newboolean{TemSumario}
+\setboolean{TemSumario}{true}
+
+\newboolean{TemReferencias}
+\setboolean{TemReferencias}{true}
+\newboolean{TemGlossario}
+\setboolean{TemGlossario}{false}        % FALTA IMPLEMENTAR!!!
+\newboolean{TemApendices}
+\setboolean{TemApendices}{true}
+\newboolean{TemAnexos}
+\setboolean{TemAnexos}{true}
+\newboolean{TemIndice}
+\setboolean{TemIndice}{true}
+
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+% Tamanho do parágrafo
+\setlength{\parindent}{1.3cm}
+% Espaçamento entre um parágrafo e outro
+\setlength{\parskip}{0.2cm}     % tente também '\onelineskip' ao invés de '0.2cm'
+
+% Compila o índice
+\makeindex

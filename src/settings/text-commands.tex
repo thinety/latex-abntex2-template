@@ -1,0 +1,151 @@
+\newcommand{\imprimirerrata}{%
+    \begin{errata}
+        Elemento opcional. Exemplo:
+        
+        \vspace{\onelineskip}
+        
+        FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
+        reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
+        rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
+        cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
+        Zootecnia, Universidade de São Paulo, São Paulo, 2011.
+        
+        \begin{table}[htb]
+            \center
+            \footnotesize
+            \begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
+                \hline
+                \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
+                \hline
+                1 & 10 & auto-conclavo & autoconclavo\\
+                \hline
+            \end{tabular}
+        \end{table}
+    
+    \end{errata}
+}
+
+\newcommand{\imprimirdedicatoria}{%
+    \begin{dedicatoria}
+        \vspace*{\fill}
+        \centering
+        \noindent
+        \textit{ Este trabalho é dedicado às crianças adultas que,\\
+        quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
+    \end{dedicatoria}
+}
+
+\newcommand{\imprimiragradecimentos}{%
+    \begin{agradecimentos}
+        Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
+        Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
+        Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
+        projeto abn\TeX\ foram extraídos de
+        \url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
+        contribuíram para que a produção de trabalhos acadêmicos conforme
+        as normas ABNT com \LaTeX\ fosse possível.
+        
+        Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
+        da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
+        Brasília (CPAI), ao grupo de usuários
+        \emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
+        novos voluntários do grupo
+        \emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
+        \url{http://www.abntex.net.br/}}~que contribuíram e que ainda
+        contribuirão para a evolução do \abnTeX.    
+    \end{agradecimentos}
+}
+
+\newcommand{\imprimirepigrafe}{%
+    \begin{epigrafe}
+        \vspace*{\fill}
+        \begin{flushright}
+            \textit{``Não vos amoldeis às estruturas deste mundo, \\
+            mas transformai-vos pela renovação da mente, \\
+            a fim de distinguir qual é a vontade de Deus: \\
+            o que é bom, o que Lhe é agradável, o que é perfeito.\\
+            (Bíblia Sagrada, Romanos 12, 2)}
+        \end{flushright}
+    \end{epigrafe}
+}
+
+\newcommand{\imprimirresumo}{%
+    \begin{resumo}
+        Segundo as normas da ABNT, o resumo deve ressaltar o objetivo, o método,
+        os resultados e as conclusões do documento. A ordem e a extensão destes
+        itens dependem do tipo de resumo (informativo ou indicativo) e do
+        tratamento que cada item recebe no documento original. O resumo deve ser
+        precedido da referência do documento, com exceção do resumo inserido no
+        próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
+        resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
+        ponto e finalizadas também por ponto.
+       
+        \textbf{Palavras-chave}: latex. abntex. editoração de texto.
+    \end{resumo}
+}
+\newcommand{\imprimirabstract}{% Inglês
+    \begin{otherlanguage}{english}
+        \begin{resumo}
+            This is the english abstract.
+
+            \textbf{Keywords}: latex. abntex. text editoration.
+        \end{resumo}
+    \end{otherlanguage}
+}
+\newcommand{\imprimirresume}{% Francês
+    \begin{otherlanguage}{french}
+        \begin{resumo}[Résumé]
+            Il s'agit d'un résumé en français.
+         
+           \textbf{Mots-clés}: latex. abntex. publication de textes.
+        \end{resumo}
+    \end{otherlanguage}
+}
+\newcommand{\imprimirresumen}{% Espanhol
+    \begin{otherlanguage}{spanish}
+        \begin{resumo}[Resumen]
+            Este es el resumen en español.
+           
+            \textbf{Palabras clave}: latex. abntex. publicación de textos.
+        \end{resumo}
+    \end{otherlanguage}
+} 
+
+\newcommand{\imprimirlistadesiglas}{%
+    \begin{siglas}
+        \item[ABNT] Associação Brasileira de Normas Técnicas
+        \item[abnTeX] ABsurdas Normas para TeX
+    \end{siglas}
+}
+\newcommand{\imprimirlistadesimbolos}{%
+    \begin{simbolos}
+        \item[$ \Gamma $] Letra grega Gama
+        \item[$ \Lambda $] Lambda
+        \item[$ \zeta $] Letra grega minúscula zeta
+        \item[$ \in $] Pertence
+    \end{simbolos}
+}
+
+\newcommand{\imprimirapendices}{%
+    \begin{apendicesenv}
+        \partapendices  % imprime uma página indicando o início dos apêndices
+
+        \chapter{Apêndice 1}
+            \lipsum
+        
+        \chapter{Apêndice 2}
+            \lipsum
+    \end{apendicesenv}
+}
+
+\newcommand{\imprimiranexos}{%
+    \begin{anexosenv}
+        \partanexos     % imprime uma página indicando o início dos anexos
+
+        \chapter{Anexo 1}
+            \lipsum
+        
+        \chapter{Anexo 2}
+            \lipsum
+    \end{anexosenv}
+}

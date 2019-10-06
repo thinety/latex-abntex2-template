@@ -1,0 +1,40 @@
+%--------------------------------------
+% REFERÊNCIAS BIBLIOGRÁFICAS
+%--------------------------------------
+\ifthenelse{\boolean{TemReferencias}}{%
+    \printbibliography
+}{}
+
+
+%--------------------------------------
+% GLOSSÁRIO
+%--------------------------------------
+\ifthenelse{\boolean{TemGlossario}}{%
+    % FALTA IMPLEMENTAR!!!
+}{}
+
+
+%--------------------------------------
+% APÊNDICES
+%--------------------------------------
+\ifthenelse{\boolean{TemApendices}}{%
+    \imprimirapendices
+}{}
+
+
+%--------------------------------------
+% ANEXOS
+%--------------------------------------
+\ifthenelse{\boolean{TemAnexos}}{%
+    \imprimiranexos
+}{}
+
+
+%--------------------------------------
+% ÍNDICE REMISSIVO
+%--------------------------------------
+\ifthenelse{\boolean{TemIndice}}{%
+    \printindex
+}{}
+% Para adicionar itens ao índice, utilize o comando 
+% '\index{termo}' no meio do texto.

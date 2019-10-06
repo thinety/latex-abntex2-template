@@ -1,0 +1,126 @@
+%--------------------------------------
+% CAPA
+%--------------------------------------
+\ifthenelse{\boolean{TemCapa}}{%
+    \imprimircapa
+}{}
+
+
+%--------------------------------------
+% FOLHA DE ROSTO & FICHA CATALOGRÁFICA
+%--------------------------------------
+\ifthenelse{\boolean{TemFolhaDeRosto}}{%
+    \ifthenelse{\boolean{TemFichaCatalografica}}{%
+        \imprimirfolhaderosto*
+
+        \begin{fichacatalografica}
+            \includepdf[pages={1}]{metadata/fichac.pdf}
+        \end{fichacatalografica}
+    }{%
+        \imprimirfolhaderosto
+    }
+}{}
+
+
+%--------------------------------------
+% ERRATA
+%--------------------------------------
+\ifthenelse{\boolean{TemErrata}}{%
+    \imprimirerrata%
+}{}
+
+
+%--------------------------------------
+% TERMO DE APROVAÇÃO
+%--------------------------------------
+\ifthenelse{\boolean{TemTermoDeAprovacao}}{%
+    \begin{folhadeaprovacao}
+        \includepdf[pages={1}]{metadata/termoa.pdf}
+    \end{folhadeaprovacao}
+}{}
+
+
+%--------------------------------------
+% DEDICATÓRIA
+%--------------------------------------
+\ifthenelse{\boolean{TemDedicatoria}}{%
+    \imprimirdedicatoria
+}{}
+
+
+%--------------------------------------
+% AGRADECIMENTOS
+%--------------------------------------
+\ifthenelse{\boolean{TemAgradecimentos}}{%
+    \imprimiragradecimentos
+}{}
+
+
+%--------------------------------------
+% EPÍGRAFE
+%--------------------------------------
+\ifthenelse{\boolean{TemEpigrafe}}{%
+    \imprimirepigrafe
+}{}
+
+
+%--------------------------------------
+% RESUMOS
+%--------------------------------------
+\ifthenelse{\boolean{TemResumos}}{%
+    \imprimirresumo
+
+    \ifthenelse{\boolean{TemAbstract}}{%
+        \imprimirabstract
+    }{}
+    \ifthenelse{\boolean{TemResume}}{%
+        \imprimirresume
+    }{}
+    \ifthenelse{\boolean{TemResumen}}{%
+        \imprimirresumen
+    }{}
+}{}
+
+
+%--------------------------------------
+% LISTAS
+%--------------------------------------
+
+    % ILUSTRAÇÕES
+    \ifthenelse{\boolean{TemListaDeIlustracoes}}{%
+        \pdfbookmark[0]{\listfigurename}{lof}
+        \listoffigures* % o * indica que a lista de ilustrações não aparece no sumário
+        \cleardoublepage
+    }{}
+
+    % QUADROS
+    \ifthenelse{\boolean{TemListaDeQuadros}}{%
+        % FALTA IMPLEMENTAR!!!
+    }{}
+
+    % TABELAS
+    \ifthenelse{\boolean{TemListaDeTabelas}}{%
+        \pdfbookmark[0]{\listtablename}{lot}
+        \listoftables* % o * indica que a lista de tabelas não aparece no sumário
+        \cleardoublepage
+    }{}
+
+    % ABREVIATURAS E SIGLAS
+    \ifthenelse{\boolean{TemListaDeSiglas}}{%
+        \imprimirlistadesiglas
+    }{}
+
+    % SÍMBOLOS
+    \ifthenelse{\boolean{TemListaDeSimbolos}}{%
+        \imprimirlistadesimbolos
+    }{}
+
+
+%--------------------------------------
+% SUMÁRIO
+%--------------------------------------
+\ifthenelse{\boolean{TemSumario}}{%
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents* % o * indica que o sumário não aparece no próprio sumário
+    \cleardoublepage        
+}{}

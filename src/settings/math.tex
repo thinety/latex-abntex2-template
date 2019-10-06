@@ -1,0 +1,61 @@
+%For obvious reasons
+%--------------------------------------
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+%--------------------------------------
+
+%Used, among others, to box equations in environments like align with \Aboxed
+%Technically, you don't need amsmath if you load this package
+%--------------------------------------
+%\usepackage{mathtools}
+%--------------------------------------
+
+%To allow page breaks inside environments like align
+%--------------------------------------
+\allowdisplaybreaks
+%--------------------------------------
+
+
+%Declaring useful commands
+%--------------------------------------
+\newcommand*{\diff}{\mathrm{d}}
+\newcommand*{\diffspace}{\mathop{}\!}
+\newcommand*{\deriv}[2]{\frac{\diff #1}{\diff #2}}
+\newcommand*{\Deriv}[3]{\frac{\diff ^#3 #1}{\diff #2 ^#3}}
+\newcommand*{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand*{\pDeriv}[3]{\frac{\partial ^#3 #1}{\partial #2 ^#3}}
+\newcommand*{\dinte}[4]{\int_#1^#2 #3 \diffspace\diff #4}
+\newcommand*{\iinte}[2]{\int #1 \diffspace\diff #2}
+%--------------------------------------
+
+%Declaring useful math operators
+%--------------------------------------
+\DeclareMathOperator{\sen}{sen}
+%\DeclareMathOperator{\cos}{cos}
+%\DeclareMathOperator{\tan}{tan}
+%\DeclareMathOperator{\sec}{sec}
+%\DeclareMathOperator{\csc}{csc}
+%\DeclareMathOperator{\cot}{cot}
+
+\DeclareMathOperator{\arcsen}{arcsen}
+%\DeclareMathOperator{\arccos}{arccos}
+%\DeclareMathOperator{\arctan}{arctan}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccot}{arccot}
+
+\DeclareMathOperator{\senh}{senh}
+%\DeclareMathOperator{\cosh}{cosh}
+%\DeclareMathOperator{\tanh}{tanh}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+%\DeclareMathOperator{\coth}{coth}
+
+\DeclareMathOperator{\arcsenh}{arcsenh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+%--------------------------------------

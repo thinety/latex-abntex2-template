@@ -1,0 +1,77 @@
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+    ]{abntex2}
+
+
+%Basic packages
+%--------------------------------------
+\usepackage{lmodern}            % Latin Modern font
+\usepackage[T1]{fontenc}        % Font encoding
+\usepackage[utf8]{inputenc}     % Input encoding
+
+\usepackage{indentfirst}        % Indents the first paragraph of each section
+\usepackage{microtype}          % Justification enhancements
+\usepackage{xcolor}             % Extended color support
+\usepackage{graphicx}           % Enhanced support for graphics,
+\graphicspath{{figures/}}           % contained in folder ./figures/
+\usepackage[final]{pdfpages}    % For including pages from PDF files
+\usepackage{float}              % Figure positioning
+
+%\usepackage{verbatim}          % Verbatim text
+\usepackage{lipsum}            % Dummy text
+%--------------------------------------
+
+
+%Bibliography package
+%--------------------------------------
+                        %vs pagebackref
+\usepackage[style=abnt,backref=true,backend=biber]{biblatex}    % ABNT style citations.
+\addbibresource{bibliography/referencias.bib}                   % Bibliography file.
+%--------------------------------------
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+%\DefineBibliographyStrings{brazil}{%
+% backrefpage = {Citado \arabic{citecounter} vez na página},% originally "cited on page"
+% backrefpages = {Citado \arabic{citecounter} vezes nas páginas},% originally "cited on pages"
+%}
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+%PDF settings
+%--------------------------------------
+\hypersetup{%
+    %pdftitle={Título do PDF},%
+	%pdfauthor={Autor do PDF},%
+    %pdfsubject={Assunto do PDF},%
+	%pdfcreator={LaTeX with abnTeX2},%
+    %pdfkeywords={palavras chave do PDF},%
+    colorlinks=true,% false: boxed links; true: colored links
+    linkcolor=blue,%
+    urlcolor=blue,%
+    filecolor=magenta%
+}
+%--------------------------------------
+
+
+
+%For compiling only, no PDF output
+%--------------------------------------
+%\usepackage{syntonly}
+%\syntaxonly
+%--------------------------------------
