@@ -1,7 +1,7 @@
 cd src/
 pdflatex --output-directory='../build' main.tex
 cd ../build/
-bibtex main.aux
+biber main.bcf
 cd ../src/
 pdflatex --output-directory='../build' main.tex
 pdflatex --output-directory='../build' main.tex
