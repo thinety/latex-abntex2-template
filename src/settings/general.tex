@@ -36,21 +36,16 @@
 %--------------------------------------
 
 
-%Bibliography package
+%Bibliography package & settings
 %--------------------------------------
-                        %vs pagebackref
-\usepackage[style=abnt,backref=true,backend=biber]{biblatex}    % ABNT style citations.
-\addbibresource{bibliography/referencias.bib}                   % Bibliography file.
+\usepackage[style=abnt,backref=true]{biblatex}  % ABNT style citations.
+\addbibresource{bibliography/referencias.bib}   % Bibliography file.
+
+\DefineBibliographyStrings{brazil}{%
+    backrefpage = {Citado na página},%
+    backrefpages = {Citado nas páginas}
+}
 %--------------------------------------
-
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-%\DefineBibliographyStrings{brazil}{%
-% backrefpage = {Citado \arabic{citecounter} vez na página},% originally "cited on page"
-% backrefpages = {Citado \arabic{citecounter} vezes nas páginas},% originally "cited on pages"
-%}
-
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 %PDF settings

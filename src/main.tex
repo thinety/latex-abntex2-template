@@ -11,42 +11,42 @@
 
 \begin{document}
 
-% Usado para selecionar o idioma do documento ('brazil' é selecionado por padrão)
-%\selectlanguage{english}
-%\selectlanguage{brazil}
+    % Usado para selecionar o idioma do documento ('brazil' é selecionado por padrão)
+    %\selectlanguage{english}
+    %\selectlanguage{brazil}
 
 
-%--------------------------------------
-% ELEMENTOS PRÉ-TEXTUAIS
-%--------------------------------------
-\pretextual
-\input{00-pretextuais}
+    %--------------------------------------
+    % ELEMENTOS PRÉ-TEXTUAIS
+    %--------------------------------------
+    \pretextual
+    \input{00-pretextuais}
 
 
-%--------------------------------------
-% ELEMENTOS TEXTUAIS
-%--------------------------------------
-\textual
+    %--------------------------------------
+    % ELEMENTOS TEXTUAIS
+    %--------------------------------------
+    \textual
 
-% Aqui podem ser utilizados como nível mais alto de separação a parte ou o capítulo.
-% O mais comum é que se use o capítulo.
+    % Aqui podem ser utilizados como nível mais alto de separação a parte ou o capítulo.
+    % O mais comum é que se use o capítulo.
 
-% No caso de utilizar partes, pode ser necessário usar a macro '\phantompart' para que
-% os bookmarks do PDF fiquem organizados.
-%\part{Introdução}
-%\part{Desenvolvimento}
-%\part{Conclusão}
+    % No caso de utilizar partes, pode ser necessário usar a macro '\phantompart' para
+    % que os bookmarks do PDF fiquem organizados.
+    %\part{Introdução}
+    %\part{Desenvolvimento}
+    %\part{Conclusão}
 
-\include{10-introducao}
-\include{20-desenvolvimento}
-\include{30-conclusao}
+    \include{10-introducao}
+    \include{20-desenvolvimento}
+    \include{30-conclusao}
 
 
-%--------------------------------------
-% ELEMENTOS PÓS-TEXTUAIS
-%--------------------------------------
-\postextual
-\input{40-postextuais}
+    %--------------------------------------
+    % ELEMENTOS PÓS-TEXTUAIS
+    %--------------------------------------
+    \postextual
+    \input{40-postextuais}
 
 
 \end{document}
