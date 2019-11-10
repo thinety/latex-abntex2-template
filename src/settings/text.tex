@@ -23,11 +23,11 @@
 \newboolean{TemFolhaDeRosto}
 \setboolean{TemFolhaDeRosto}{true}
 \newboolean{TemFichaCatalografica}
-\setboolean{TemFichaCatalografica}{true}
+\setboolean{TemFichaCatalografica}{false}
 \newboolean{TemErrata}
 \setboolean{TemErrata}{true}
 \newboolean{TemTermoDeAprovacao}
-\setboolean{TemTermoDeAprovacao}{true}
+\setboolean{TemTermoDeAprovacao}{false}
 \newboolean{TemDedicatoria}
 \setboolean{TemDedicatoria}{true}
 \newboolean{TemAgradecimentos}
@@ -67,7 +67,9 @@
 \newboolean{TemAnexos}
 \setboolean{TemAnexos}{true}
 \newboolean{TemIndice}
-\setboolean{TemIndice}{true}
+\setboolean{TemIndice}{false}          % KNOWN BUG!
+% You need to modify the generated main.idx file to UTF-8 encoding,
+% so that 'makeidx' can also produce its output in UTF-8.
 
 
 % Retira espaço extra obsoleto entre as frases.
